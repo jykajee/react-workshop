@@ -31,7 +31,7 @@ const Header = ({ title }) => (
 
     <nav>
       <NavItem to="/about">About me</NavItem>
-      <NavItem to="/projects">My projects</NavItem>
+      <NavItem to="/projects">Ongoing projects</NavItem>
     </nav>
   </Container>
 );

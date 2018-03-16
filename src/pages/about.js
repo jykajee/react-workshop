@@ -5,12 +5,28 @@ import styled from "styled-components";
 import Popup from "../components/Popup";
 import Button from "../components/Button";
 import H1 from "../components/H1";
+import ProfilePic from "../assets/profile_pic.jpg";
 
 const Paragraph = styled.p`
   margin-bottom: 1rem;
   line-height: 150%;
   font-size: 18px;
 `;
+
+const Picture = styled.img`
+  width: 200px;
+  float: right;
+  margin-right: 20%;
+  border-radius: 20px;
+`;
+
+  const LinkReference = styled.a`
+    margin-right: 5%;
+    background-color: #FF8A65;
+    padding: 5px;
+    border-radius: 5px;
+    text-decoration: none;
+  `
 
 export default class About extends React.Component {
   constructor(props) {
@@ -29,27 +45,35 @@ export default class About extends React.Component {
     });
   }
 
+
+
   render() {
     return (
       <div>
-        <H1>About {this.props.data.site.siteMetadata.title}</H1>
+        <Picture src={ProfilePic} alt="Profile Picture" />
+        <H1>Hi! I'm Jyri</H1>
         <Paragraph>
-          Luke Skywalker has returned to his home planet of Tatooine in an
-          attempt to rescue his friend Han Solo from the clutches of the vile
-          gangster Jabba the Hutt. Little does Luke know that the GALACTIC
-          EMPIRE has secretly begun construction on a new armored space station
-          even more powerful than the first dreaded Death Star. When completed,
-          this ultimate weapon will spell certain doom for the small band of
-          rebels struggling to restore freedom to the galaxy...
+          I'm UX specialist with a passion for code. What I can't do I will learn. Hire me today.
         </Paragraph>
+        <Paragraph>
+          jyri247@gmail.com
+        </Paragraph>
+        <LinkReference href="https://www.linkedin.com/in/jyri-makinen/" target="_blank">
+          LinkedIn
+        </LinkReference>
+        <LinkReference href="https://github.com/jykajee" target="_blank">
+          Github
+        </LinkReference>
 
-        <Button onClick={this.onTogglePopup}>Open popup</Button>
-
-        {this.state.isPopupOpen && <Popup onClose={this.onTogglePopup} />}
       </div>
     );
   }
 }
+/* Example popup implementation
+        <Button onClick={this.onTogglePopup}>Open popup</Button>
+
+        {this.state.isPopupOpen && <Popup onClose={this.onTogglePopup} />}
+*/
 
 export const query = graphql`
   query AboutQuery {
