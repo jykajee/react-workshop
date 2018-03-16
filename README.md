@@ -1,6 +1,6 @@
 # gatsby-workshop
 
-A simple Gatsby site for student workshop use.
+Continuing on the LUUPPI/FUTURICE React-workshop project. Aiming to have a proper react-gatsby based portfolio.
 
 ## Development environment
 

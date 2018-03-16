@@ -24,9 +24,9 @@ const CardWrapper = styled.div`
 const Title = styled.h2`
     position: absolute;
     bottom: 0;
-
-    color: #F44336;
-    text-shadow: 2px 2px rgba(250,250,250,0.3);
+    left: 2%;
+    color: #FFF3E0;
+    text-shadow: 5px 5px 5px rgba(0,0,0,0.5);
 `;
 
 const Image = styled.div`
