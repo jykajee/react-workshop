@@ -28,13 +28,13 @@ const Container = styled.div`
 const Layout = ({ children, data }) => (
   <Container>
     <Helmet
-      title={data.site.siteMetadata.title}
+      title={"Jyri Mäkinen"}
       meta={[
-        { name: "description", content: data.site.siteMetadata.description },
-        { name: "keywords", content: data.site.siteMetadata.keywords }
+        { name: "description", /* content: data.site.siteMetadata.description */ },
+        { name: "keywords", /* content: data.site.siteMetadata.keywords */ }
       ]}
     />
-    <Header title={data.site.siteMetadata.title} />
+    <Header title={"Portfolio" /*data.site.siteMetadata.title*/ } />
 
     {children()}
   </Container>

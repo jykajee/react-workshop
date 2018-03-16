@@ -3,14 +3,54 @@ import styled from "styled-components";
 
 import Card from '../components/Card';
 
-export default class Index extends React.Component {
+const CardGrid = styled.div`
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: auto;
 
-    render () {
-        return(
+
+`;
+
+const PostCount = styled.h4`
+    text-align: center;
+    font-size: 12px;
+    color: #616161;
+    padding: 3px;
+`;
+
+export default ({ data }) => (
             <div>
-            <Card title="Purrfect" imageUrl="https://img.purch.com/w/660/aHR0cDovL3d3dy5saXZlc2NpZW5jZS5jb20vaW1hZ2VzL2kvMDAwLzA5Ny85NTkvb3JpZ2luYWwvc2h1dHRlcnN0b2NrXzYzOTcxNjY1LmpwZw==" />
-            <Card title="Anotha" imageUrl="https://images.petsmartassets.com/is/image/PetSmart/BR_VDFEAT-Authority-DOG-20160818?$PB0802$" />
+                <PostCount> {data.allMarkdownRemark.totalCount } posts </PostCount >
+                <CardGrid>
+                    {data.allMarkdownRemark.edges.map(({ node })=>(
+                        <Card key={node.id} to={node.fields.slug} node={node} />
+                    ))}
+                </CardGrid>
             </div>
-        )
-}
-}
+        
+    
+);
+
+
+export const query = graphql`
+  query IndexQuery {
+    allMarkdownRemark {
+      totalCount
+      edges {
+        node {
+          id
+          frontmatter {
+            title
+            thumbnailUrl
+            tags
+            date(formatString: "DD.M.YYYY")
+          }
+          fields {
+            slug
+           }
+           excerpt
+        }
+      }
+    }
+  }
+`;

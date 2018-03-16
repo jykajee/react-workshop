@@ -1,29 +1,94 @@
 import React from 'react';
 import styled from 'styled-components';
+import Link from "gatsby-link";
 
+const CardLink = styled(Link)`
+    text-decoration: none;
+    transition: 0.1s all;
+    &:hover {
+        transform: scale(1.02);
+    }
+`
 
 const CardWrapper = styled.div`
-    border: 1px solid #FF8A80;
-    padding: 40px;
-    max-width: 70%;
-    `;
-
-const Image = styled.img`
+    
+    border-radius: 6px;
+    padding: 0em;
+    padding-bottom: 0em;
     max-width: 95%;
+    margin-bottom: 10%;
+    height: 94%;
+    box-shadow: 7px 10px 5px rgba(0,0,0,0.1);
     `;
 
-export default class Card extends React.Component {
+const Title = styled.h2`
+    position: absolute;
+    bottom: 0;
 
-    render() {
+    color: #F44336;
+    text-shadow: 2px 2px rgba(250,250,250,0.3);
+`;
+
+const Image = styled.div`
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 10rem;
+    border-radius: 5px;
+    z-index: 10;
+    `;
+
+const Date = styled.p`
+    padding: 2px;
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-bottom: 4px;
+    color: #212121;
+`
+const Tag = styled.p`
+    background-color: #F4511E;
+    color: #FAFAFA;
+    display: inline-block;
+    float: right;
+    border-radius: 5px;
+    padding: 2px;
+    padding-left: 4px;
+    padding-right: 4px;
+    
+`
+const Excerpt = styled.p`
+    color: #212121;
+    margin-left: 2%;
+`
+
+const MetaRow = styled.div`
+    margin-top: 3%;
+    margin-bottom: 2%;
+    margin-right: 5%;
+`
+
+const Card = ({node, to}) => {
         return (
-            <CardWrapper>
-            <div>
-                <h1>{this.props.title}</h1>
-                
-                    <Image src={this.props.imageUrl}  /> 
-                   
-            </div>
-            </CardWrapper>
+            <CardLink to={to}>
+                <CardWrapper>
+                    <div>
+                        
+                        <Image
+                            style = {{
+                                backgroundImage: `url(${node.frontmatter.thumbnailUrl})`
+                                }}> 
+                            <Title>{node.frontmatter.title}</Title>
+                        </Image>
+                        <MetaRow>
+                            <Tag>{node.frontmatter.tags}</Tag>
+                            <Date>{node.frontmatter.date}</Date>
+                        </MetaRow>
+                        <Excerpt>{node.excerpt}</Excerpt>
+                    </div>
+                </CardWrapper>
+            </CardLink>
         )
-        }
-    }
+    
+}
+
+export default Card;
