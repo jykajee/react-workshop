@@ -7,7 +7,7 @@ const CardGrid = styled.div`
     display: grid;
     grid-template-columns: 33% 33% 33%;
     grid-template-rows: auto;
-
+    grid-gap: 5px 1em;
 
 `;
 
@@ -20,7 +20,7 @@ const PostCount = styled.h4`
 
 export default ({ data }) => (
             <div>
-                <PostCount> {data.allMarkdownRemark.totalCount } posts </PostCount >
+                
                 <CardGrid>
                     {data.allMarkdownRemark.edges.map(({ node })=>(
                         <Card key={node.id} to={node.fields.slug} node={node} />
@@ -34,7 +34,7 @@ export default ({ data }) => (
 
 export const query = graphql`
   query IndexQuery {
-    allMarkdownRemark {
+    allMarkdownRemark (filter: {frontmatter: {ongoing: {eq: false}}}){
       totalCount
       edges {
         node {
@@ -54,3 +54,8 @@ export const query = graphql`
     }
   }
 `;
+
+/*
+post count toteutus:
+<PostCount> {data.allMarkdownRemark.totalCount } posts </PostCount >
+*/

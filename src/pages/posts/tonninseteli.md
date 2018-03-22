@@ -4,6 +4,7 @@ date: "2018-03-12"
 thumbnailUrl: "https://i.ytimg.com/vi/mHvBvkSCx2w/hqdefault.jpg"
 
 tags: "meow"
+ongoing: true
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer porta dapibus mauris, porta lacinia lacus. Quisque ut augue eu lacus venenatis commodo a vitae mi. Nunc eu lacus sed diam accumsan malesuada et vitae justo. Nullam ut ex arcu. Suspendisse potenti. Donec gravida mattis tellus, eu elementum metus pulvinar ut. Pellentesque sed libero tortor. Fusce eget felis a nunc vestibulum mollis sit amet ac mauris. Fusce diam diam, pellentesque a blandit et, dictum id urna. Ut semper posuere vehicula. Nunc a dapibus nisl, non iaculis odio. In iaculis, nisi nec lacinia sollicitudin, diam ipsum tempor ante, quis pretium ante justo in lectus. Cras nec molestie leo.

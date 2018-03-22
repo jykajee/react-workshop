@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "gatsby-link";
-import styled from "styled-components";
+//import styled from "styled-components";
+import styled from 'styled-components';
 
 const Container = styled.div`
   display: flex;
@@ -8,17 +9,27 @@ const Container = styled.div`
   margin: 2rem 0;
 `;
 
+
+
 const Logo = styled(Link)`
   font-size: 24px;
   font-weight: bold;
+  font-family: roboto;
+  font-style: italic;
+  letter-spacing: 3px;
   text-decoration: none;
-  color: #e74c3c;
+  color: #455A64;
 `;
 
 const NavItem = styled(Link)`
   display: inline-block;
+  bottom: 0px;
   margin-right: 1rem;
-  color: #e74c3c;
+  font-family: roboto;
+  font-style: italic;
+  letter-spacing: 2px;
+  text-decoration: none;
+  color: #455A64;
 
   &:last-of-type {
     margin-right: 0;
@@ -30,8 +41,8 @@ const Header = ({ title }) => (
     <Logo to="/">{title}</Logo>
 
     <nav>
-      <NavItem to="/about">About me</NavItem>
-      <NavItem to="/projects">Ongoing projects</NavItem>
+      <NavItem to="/about">/about me</NavItem>
+      <NavItem to="/projects">/ongoing projects</NavItem>
     </nav>
   </Container>
 );

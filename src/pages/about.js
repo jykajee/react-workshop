@@ -16,16 +16,23 @@ const Paragraph = styled.p`
 const Picture = styled.img`
   width: 200px;
   float: right;
-  margin-right: 20%;
+  margin-right: 15%;
   border-radius: 20px;
 `;
 
   const LinkReference = styled.a`
     margin-right: 5%;
-    background-color: #FF8A65;
+    background-color:  #8BCBFF;
+    color: #FAFAFA;
     padding: 5px;
+    padding-left: 3em;
+    padding-right: 3em;
     border-radius: 5px;
     text-decoration: none;
+  `
+
+  const Wrapper = styled.div`
+    margin-top: 10%;
   `
 
 export default class About extends React.Component {
@@ -49,11 +56,14 @@ export default class About extends React.Component {
 
   render() {
     return (
-      <div>
+      <Wrapper>
         <Picture src={ProfilePic} alt="Profile Picture" />
-        <H1>Hi! I'm Jyri</H1>
+        <H1>Hi! I'm Jyri,</H1>
         <Paragraph>
-          I'm UX specialist with a passion for code. What I can't do I will learn. Hire me today.
+          a UX enhusiast with a passion for code. What I can't do I will learn. Let's build something amazing together.
+        </Paragraph>
+        <Paragraph>
+          Hire me today!
         </Paragraph>
         <Paragraph>
           jyri247@gmail.com
@@ -65,7 +75,7 @@ export default class About extends React.Component {
           Github
         </LinkReference>
 
-      </div>
+      </Wrapper>
     );
   }
 }

@@ -11,7 +11,7 @@ const CardLink = styled(Link)`
 `
 
 const CardWrapper = styled.div`
-    
+    position: relative;
     border-radius: 6px;
     padding: 0em;
     padding-bottom: 0em;
@@ -26,15 +26,17 @@ const Title = styled.h2`
     bottom: 0;
     left: 2%;
     color: #FFF3E0;
-    text-shadow: 5px 5px 5px rgba(0,0,0,0.5);
+    text-shadow: 3px 2px 5px rgba(0,0,0,0.5);
 `;
 
 const Image = styled.div`
     position: relative;
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: 50% 0;
     height: 10rem;
-    border-radius: 5px;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
     z-index: 10;
     `;
 
@@ -43,13 +45,13 @@ const Date = styled.p`
     padding-left: 4px;
     padding-right: 4px;
     padding-bottom: 4px;
-    color: #212121;
+    color: #757575;
 `
 const Tag = styled.p`
-    background-color: #F4511E;
+    background-color: #C1E3FF;
     color: #FAFAFA;
-    display: inline-block;
-    float: right;
+    display: inline;
+    float: left;
     border-radius: 5px;
     padding: 2px;
     padding-left: 4px;
@@ -57,14 +59,21 @@ const Tag = styled.p`
     
 `
 const Excerpt = styled.p`
-    color: #212121;
+    color: #424242;
     margin-left: 2%;
+    text-size: 4vw;
 `
 
 const MetaRow = styled.div`
+    display: inline-block;
     margin-top: 3%;
     margin-bottom: 2%;
     margin-right: 5%;
+    width: 100%;
+`
+const MetaRowBottom = MetaRow.extend`
+    
+    bottom: 0px;
 `
 
 const Card = ({node, to}) => {
@@ -81,9 +90,11 @@ const Card = ({node, to}) => {
                         </Image>
                         <MetaRow>
                             <Tag>{node.frontmatter.tags}</Tag>
-                            <Date>{node.frontmatter.date}</Date>
                         </MetaRow>
                         <Excerpt>{node.excerpt}</Excerpt>
+                        <MetaRowBottom>
+                            <Date>{node.frontmatter.date}</Date>
+                        </MetaRowBottom>
                     </div>
                 </CardWrapper>
             </CardLink>

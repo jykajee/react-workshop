@@ -13,7 +13,7 @@ injectGlobal`
   }
 
   body {
-    border-top: 5px solid #e74c3c;
+    border-top: 5px solid #8BCBFF;
     background: #f5f1f0;
   }
 `;
@@ -34,7 +34,7 @@ const Layout = ({ children, data }) => (
         { name: "keywords", /* content: data.site.siteMetadata.keywords */ }
       ]}
     />
-    <Header title={"Portfolio" /*data.site.siteMetadata.title*/ } />
+    <Header title={"/jyri mäkinen/portfolio" /*data.site.siteMetadata.title*/ } />
 
     {children()}
   </Container>
