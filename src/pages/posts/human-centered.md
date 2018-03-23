@@ -1,7 +1,7 @@
 ---
 title: "Human-centered design project"
 date: "2017-02-24"
-thumbnailUrl: "[a relative link](other_file.md)"
+thumbnailUrl: "/assets/hcd-project2.png"
 tags: "Contextual inquiry"
 ongoing: false
 ---
