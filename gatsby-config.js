@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix: '/images',
   siteMetadata: {
     title: "My Portfolio",
     description: "My test site",
@@ -16,4 +17,5 @@ module.exports = {
       }
     }
   ]
+
 };

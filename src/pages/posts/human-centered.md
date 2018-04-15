@@ -1,7 +1,7 @@
 ---
 title: "Human-centered design project"
 date: "2017-02-24"
-thumbnailUrl: "/assets/hcd-project2.png"
+thumbnailUrl: "https://hirejyri.files.wordpress.com/2018/04/hcd-project1.jpg?w=700&h="
 tags: "Contextual inquiry"
 ongoing: false
 ---

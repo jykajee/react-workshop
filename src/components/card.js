@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Link from "gatsby-link";
+import { withPrefix } from "gatsby-link";
 
 const CardLink = styled(Link)`
     text-decoration: none;

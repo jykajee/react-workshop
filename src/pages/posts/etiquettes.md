@@ -1,7 +1,7 @@
 ---
 title: "Homebrew etiquettes"
 date: "2018-03-12"
-thumbnailUrl: "https://kaakkoisaasia.files.wordpress.com/2017/11/20171021_093752.jpg?w=1200&h="
+thumbnailUrl: "https://hirejyri.files.wordpress.com/2018/04/etiquette1.png?w=1000&h="
 tags: "Photoshop"
 ongoing: false
 ---
