@@ -34,7 +34,7 @@ const Layout = ({ children, data }) => (
         { name: "keywords", /* content: data.site.siteMetadata.keywords */ }
       ]}
     />
-    <Header title={"/jyri mäkinen/portfolio (in progress)" /*data.site.siteMetadata.title*/ } />
+    <Header title={"/jyri mäkinen/portfolio" /*data.site.siteMetadata.title*/ } />
 
     {children()}
   </Container>
