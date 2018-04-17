@@ -1,5 +1,7 @@
 import React from "react";
 import styled from "styled-components";
+import ContentImg from "../components/ContentImg";
+import Link from "gatsby-link";
 
 const PostImage = styled.div`
   margin: 2rem 0 1rem 0;
@@ -55,7 +57,7 @@ const PostTags = styled.span`
   text-transform: uppercase;
   font-size: 10px;
   font-weight: bold;
-  background: #e74c3c;
+  background: #8BCBFF;
   color: white;
   border-radius: 20px;
 `;
@@ -66,13 +68,39 @@ const MainContent = styled.div`
     line-height: 150%;
     font-size: 18px;
   }
+  h2 {
+    color: #424242;
+  }
 `;
+const BackButton = styled(Link)`
+  margin-left: 35%;
+  margin-bottom: 10px;
+  background-color:  #8BCBFF;
+  color: #212121;
+  padding: 10px;
+  padding-left: 10%;
+  padding-right: 10%;
+  border-radius: 5px;
+  font-family: roboto;
+  font-style: italic;
+  text-decoration: none;
+  box-shadow: 2px 2px #616161;
+  &:hover {
+        transform: scale(1.5);
+        box-shadow: 3px 5px #757575;
+        transition: box-shadow 0.3s ease-in-out;
+    }
+`;
+
+const PageWrapper = styled.div`
+    padding-bottom: 4em;
+`
 
 export default ({ data }) => {
   const post = data.markdownRemark;
 
   return (
-    <div>
+    <PageWrapper>
       <PostImage
         style={{
           backgroundImage: `url(${post.frontmatter.thumbnailUrl})`
@@ -86,7 +114,9 @@ export default ({ data }) => {
         <PostTags>{post.frontmatter.tags}</PostTags>
       </PostMeta>
       <MainContent dangerouslySetInnerHTML={{ __html: post.html }} />
-    </div>
+      <ContentImg urls={post.frontmatter.contentImgUrls} />
+      <BackButton to="/" >See other projects</BackButton>
+    </PageWrapper>
   );
 };
 
@@ -98,6 +128,7 @@ export const query = graphql`
         title
         thumbnailUrl
         tags
+        contentImgUrls
         date(formatString: "DD.M.YYYY")
       }
     }

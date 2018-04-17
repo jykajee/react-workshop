@@ -11,21 +11,24 @@ const CardGrid = styled.div`
 
 `;
 
-const PostCount = styled.h4`
+const Status = styled.h4`
     text-align: center;
     font-size: 12px;
     color: #616161;
     padding: 3px;
+    font-family: roboto;
+    font-style: italic;
+    margin-bottom: 1em;
 `;
 
 export default ({ data }) => (
             <div>
-                
                 <CardGrid>
                     {data.allMarkdownRemark.edges.map(({ node })=>(
                         <Card key={node.id} to={node.fields.slug} node={node} />
                     ))}
                 </CardGrid>
+                <Status>Updated 17.4.2018 / More content coming soon..</Status>
             </div>
         
     
@@ -34,7 +37,7 @@ export default ({ data }) => (
 
 export const query = graphql`
   query IndexQuery {
-    allMarkdownRemark (filter: {frontmatter: {ongoing: {eq: false}}}){
+    allMarkdownRemark (filter: {frontmatter: {ongoing: {eq: false}}} sort: { fields: [frontmatter___date], order: DESC }){
       totalCount
       edges {
         node {
