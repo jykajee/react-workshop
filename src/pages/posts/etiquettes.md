@@ -9,9 +9,9 @@ contentImgUrls: "https://hirejyri.files.wordpress.com/2018/04/tonninseteli.png?w
 
 As a support for my homebrew hobby I started making etiquettes for my beers.
 
-I have made three designs and the etiquette-making has become a vital part of our crew's homebrews.
+I have made three designs and the etiquette-making has become a vital part of our friends homebrews. 
 
-Story behind the designs:
+Stories behind the designs:
 * Tonnin Seteli: This traditional style beer needed a traditional style etiquette. That's why the uninspired unsaturated face and a "worn-out wallpaper" in the background. To balance the traditionalness I took the theme from a well known Finnish meme. This meme was perfect as it has been popping out from the internet and into everyday language.
 
 * Celebration Punch: This design was for a friend who wanted an etiquette for an exceptionally hoppy beer. It was for the celebration of his 30th birthday. Style comes from an old Nintendo game Puch Out. It's all about that puch of the hops.
@@ -21,4 +21,4 @@ Story behind the designs:
 __Skills I've learned:__ Photoshop, graphic design.
 
 
-## Check these out:
+## Here's the prints:
