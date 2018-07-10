@@ -2,7 +2,7 @@
 title: "Public speaking in VR -project"
 date: "2018-07-01"
 thumbnailUrl: "https://hirejyri.files.wordpress.com/2018/04/image10.png?w=1400&h="
-tags: "Unity","Vr","Leap"
+tags: "Unity,Vr,Leap"
 ongoing: false
 contentImgUrls: "https://hirejyri.files.wordpress.com/2018/04/image10.png?w=1400&h=,https://hirejyri.files.wordpress.com/2018/04/image2.png?w=1400&h=,https://hirejyri.files.wordpress.com/2018/04/image1.png?w=1000&h="
 ---
